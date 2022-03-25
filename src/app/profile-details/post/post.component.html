@@ -1,0 +1,18 @@
+<app-header></app-header>
+<ul class="nav nav-tabs navbar-dark bg-light">
+    <li class="nav-item">
+      <a class="nav-link " aria-current="page" routerLink="/profile-details/{{id}}">profile_info</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/profile-details/{{id}}/useralbum">user_album</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/profile-details/{{id}}/post">posts</a>
+    </li>
+  </ul>
+
+<div class="container-fluid bg-light custom" *ngFor="let userpost of postdata">
+    <h3>{{userpost.title}}</h3>
+    <h4>{{userpost.body}}</h4>
+</div>
+<app-footer></app-footer>

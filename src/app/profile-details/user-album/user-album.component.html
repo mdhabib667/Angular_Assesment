@@ -1,0 +1,31 @@
+<app-header ></app-header>
+<ul class="nav nav-tabs navbar-dark bg-light">
+    <li class="nav-item">
+      <a class="nav-link " aria-current="page" routerLink="/profile-details/{{id}}">profile_info</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="/profile-details/{{id}}/useralbum">user_album</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/profile-details/{{id}}/post">posts</a>
+    </li>
+  </ul>
+
+  <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4 custom" >
+        <div class="col " *ngFor="let userdata of albumData">
+          <div class="card bg-light">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{userdata.title}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+<app-footer></app-footer>

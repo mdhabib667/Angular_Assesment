@@ -1,1 +1,69 @@
-<p>dashboard works!</p>
+<app-header></app-header>
+
+
+<!-- <div *ngFor="let user of users">
+    <p>{{user.name}}<p>  
+    <p>{{user.username}}<p>  
+    <p>{{user.email}}<p>  
+    <p>{{user.phone}}<p>  
+    <button>view profile</button>
+</div> -->
+
+    <!-- <mat-grid-list cols="3" rowHeight="2:1" *ngFor="let user of users">
+        <mat-grid-tile><mat-card class="user-card">
+            <mat-card-title-group>
+              <mat-card-title>{{user.name}}</mat-card-title>
+              <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+              <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+            <mat-card-subtitle>{{user.phone}}</mat-card-subtitle>
+              <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+            </mat-card-title-group>
+            <button class="bg-primary" routerLink="/profile-details/{{user.id}}">view profile</button>
+        </mat-card></mat-grid-tile>
+      </mat-grid-list> -->
+
+
+
+
+  <!-- <div *ngFor="let user of users" >
+    <mat-card class="user-card">
+        <mat-card-title-group>
+          <mat-card-title>{{user.name}}</mat-card-title>
+          <mat-card-subtitle>{{user.username}}</mat-card-subtitle>
+          <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+        <mat-card-subtitle>{{user.phone}}</mat-card-subtitle>
+          <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
+        </mat-card-title-group>
+        <button>view profile</button>
+    </mat-card>
+</div> -->
+<!-- <div class="container-fluid">
+  <form class="d-flex" >
+    <input class="form-control me-2" [(ngModel)]="searchText" name="searchText" type="search"  placeholder="Search" aria-label="Search" > 
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let user of users">
+      <div class="card mb-3 border-dark " style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="assets/profilepic.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body text-dark">
+              <h3 class="card-title">{{user.username}}</h3>
+              <h3 class="card-title">{{user.email}}</h3>
+              <h3 class="card-title">{{user.phone}}</h3>
+              <a routerLink="/profile-details/{{user.id}}" class="btn btn-dark">view profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

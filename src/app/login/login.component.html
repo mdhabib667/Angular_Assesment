@@ -1,9 +1,32 @@
-<p>login works!</p>
-<form method="post" (ngSubmit)="onSubmit()" [formGroup]="loginform" >
+
+<!-- <form method="post" (ngSubmit)="onSubmit()" [formGroup]="loginform" >
     <input type="email" id="username" name="username" required formControlName="username">
     <br>
     <input type="password" id="password" name="password" required formControlName="password">
     <br>
-    <button>submit</button>
+    <button class="bg-primary">submit</button>
 
-</form>
+</form> -->
+
+<main class="form-signin">
+    <form method="post" (ngSubmit)="onSubmit()" [formGroup]="loginform" >
+      <h1 class="h3 mb-3 fw-normal" style="text-align: center;">Please sign in</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="username" required >
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"formControlName="password" required >
+        <label for="floatingPassword">Password</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted" style="text-align: center;">&copy; 2021–2022</p>
+    </form>
+  </main>

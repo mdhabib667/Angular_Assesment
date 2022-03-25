@@ -1,0 +1,12 @@
+.nav-link{
+    font-size: medium;
+    color: gray;
+}
+.container-fluid{
+height:100%;
+}
+.custom{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
