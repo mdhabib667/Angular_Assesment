@@ -8,7 +8,7 @@ import { UsersService } from 'src/app/services/users.service';
 export class DashboardComponent implements OnInit {
 
   users:any;
-  searchText:any;
+  searchText:string='';
   constructor(private userdetails:UsersService) { }
 
   ngOnInit(): void {
